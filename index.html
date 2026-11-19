@@ -15,11 +15,6 @@
 <body>
   <a class="skip-link" href="#main">К содержанию</a>
 
-  <div class="rename-note" id="renameNote">
-    <span>Мы выросли и стали «Своей траекторией»</span>
-    <button type="button" aria-label="Закрыть сообщение" data-dismiss-note>×</button>
-  </div>
-
   <header class="site-header" id="top">
     <div class="container header-inner">
       <a class="brand" href="#top" aria-label="Своя траектория, на главную">
@@ -33,7 +28,7 @@
       </nav>
       <div class="header-actions">
         <a class="phone" href="tel:+79856379772">+7 985 637-97-72</a>
-        <button class="btn btn-primary" type="button" data-open-form>Записаться</button>
+        <a class="btn btn-primary" href="tel:+79856379772">Позвонить</a>
         <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню"><span></span><span></span></button>
       </div>
     </div>
@@ -44,14 +39,14 @@
 
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
-      <div class="hero-media" role="img" aria-label="Дети с поднятыми руками на занятии"></div>
+      <div class="hero-media" role="img" aria-label="Дети занимаются вместе с педагогом в светлом классе"></div>
       <div class="hero-shape"></div>
       <div class="container hero-content">
         <p class="eyebrow">Москва · Текстильщики — Кузьминки</p>
         <h1 id="hero-title">У каждого ребёнка<br><em>своя траектория</em></h1>
         <p class="hero-lead">Помогаем развивать речь, уверенно читать и писать, подготовиться к школе и найти комфортный ритм обучения.</p>
         <div class="hero-actions">
-          <button class="btn btn-primary btn-large" type="button" data-open-form>Записаться</button>
+          <a class="btn btn-primary btn-large" href="tel:+79856379772">Позвонить в центр</a>
           <a class="btn btn-light btn-large" href="#finder">Подобрать программу</a>
         </div>
         <div class="hero-proof" aria-label="Кратко о центре">
@@ -67,20 +62,22 @@
       <div class="container">
         <div class="section-heading finder-heading">
           <div><p class="eyebrow green">Быстрый подбор</p><h2>С чего начнём?</h2></div>
-          <p>Выберите возраст или ситуацию — покажем программы, которые могут подойти. Финальное решение принимаем после знакомства с ребёнком.</p>
+          <p>Сначала выберите возраст, затем — главный запрос. Мы подсветим наиболее подходящие программы ниже.</p>
         </div>
         <div class="finder-panel">
-          <div class="finder-tabs" role="tablist" aria-label="Способ подбора">
-            <button class="finder-tab active" type="button" role="tab" aria-selected="true" data-finder-tab="age">По возрасту</button>
-            <button class="finder-tab" type="button" role="tab" aria-selected="false" data-finder-tab="need">По запросу</button>
+          <div class="finder-step">
+            <div class="finder-step-title"><span>1</span><div><b>Сколько лет ребёнку?</b><small>Можно выбрать один вариант</small></div></div>
+            <div class="finder-options" data-filter-group="age">
+              <button type="button" data-age="2-3">2–3 года</button><button type="button" data-age="3-4">3,5–4</button><button type="button" data-age="4-5">4–5</button><button type="button" data-age="5-6">5–6</button><button type="button" data-age="6">6 лет</button><button type="button" data-age="school">1–4 класс</button>
+            </div>
           </div>
-          <div class="finder-options active" data-finder-panel="age">
-            <button type="button" data-filter="2-3">2–3 года</button><button type="button" data-filter="3-4">3,5–4</button><button type="button" data-filter="4-5">4–5</button><button type="button" data-filter="5-6">5–6</button><button type="button" data-filter="6">6 лет</button><button type="button" data-filter="school">1–4 класс</button>
+          <div class="finder-step">
+            <div class="finder-step-title"><span>2</span><div><b>Что сейчас особенно важно?</b><small>Уточните главный запрос</small></div></div>
+            <div class="finder-options" data-filter-group="need">
+              <button type="button" data-need="speech">Речь и звукопроизношение</button><button type="button" data-need="writing">Письмо и чтение</button><button type="button" data-need="school">Подготовка и школьные трудности</button><button type="button" data-need="family">Комфортный формат обучения</button>
+            </div>
           </div>
-          <div class="finder-options" data-finder-panel="need" hidden>
-            <button type="button" data-filter="speech">Не говорит или плохо произносит звуки</button><button type="button" data-filter="writing">Трудно писать и читать</button><button type="button" data-filter="school">Школьные трудности</button><button type="button" data-filter="family">Некомфортно в большом классе</button>
-          </div>
-          <p class="finder-result" id="finderResult" aria-live="polite">Нажмите на вариант — подсветим подходящие программы ниже.</p>
+          <p class="finder-result" id="finderResult" aria-live="polite">Выберите возраст и запрос — подходящие карточки будут выделены жёлтым.</p>
         </div>
       </div>
     </section>
@@ -173,11 +170,11 @@
 
     <section class="enrollment section">
       <div class="container">
-        <div class="section-heading"><div><p class="eyebrow green">Ближайшие наборы</p><h2>Можно присоединиться</h2></div><p>Оставьте контакт — администратор уточнит актуальное расписание и наличие мест.</p></div>
+        <div class="section-heading"><div><p class="eyebrow green">Ближайшие наборы</p><h2>Можно присоединиться</h2></div><p>Позвоните или напишите администратору — уточним актуальное расписание и наличие мест.</p></div>
         <div class="enrollment-list">
-          <article><span class="date-chip">сейчас</span><div><h3>Подготовка к школе</h3><p>Вечерние группы 5 и 6 лет, субботняя группа 6 лет</p></div><button class="round-btn" type="button" data-open-form aria-label="Записаться на подготовку к школе">+</button></article>
-          <article><span class="date-chip yellow">январь</span><div><h3>Нулевой класс</h3><p>Утренние занятия 3 раза в неделю по 2,5 часа</p></div><button class="round-btn" type="button" data-open-form aria-label="Записаться в список нулевого класса">+</button></article>
-          <article><span class="date-chip">скоро</span><div><h3>Онлайн-программа по речи</h3><p>Записанные фильмы и небольшие задания — сообщим о запуске</p></div><button class="round-btn" type="button" data-open-form aria-label="Узнать о запуске онлайн-программы">+</button></article>
+          <article><span class="date-chip">сейчас</span><div><h3>Подготовка к школе</h3><p>Вечерние группы 5 и 6 лет, субботняя группа 6 лет</p></div><a class="round-btn" href="tel:+79856379772" aria-label="Позвонить о подготовке к школе">+</a></article>
+          <article><span class="date-chip yellow">январь</span><div><h3>Нулевой класс</h3><p>Утренние занятия 3 раза в неделю по 2,5 часа</p></div><a class="round-btn" href="https://t.me/kumguat1" target="_blank" rel="noopener" aria-label="Написать о нулевом классе">+</a></article>
+          <article><span class="date-chip">скоро</span><div><h3>Онлайн-программа по речи</h3><p>Записанные фильмы и небольшие задания — сообщим о запуске</p></div><a class="round-btn" href="https://t.me/kumguat1" target="_blank" rel="noopener" aria-label="Написать об онлайн-программе">+</a></article>
         </div>
       </div>
     </section>
@@ -198,16 +195,11 @@
     <section class="contacts section" id="contacts">
       <div class="container contact-card">
         <div class="contact-copy"><p class="eyebrow yellow-text">Приезжайте знакомиться</p><h2>Мы рядом</h2><address>Москва, ул. Васильцовский стан,<br>д. 5, к. 2</address><p>Метро «Текстильщики» и «Кузьминки» · ЮВАО</p><div class="contact-links"><a href="tel:+79856379772">+7 985 637-97-72</a><a href="https://yandex.ru/maps/?text=Москва%2C%20ул.%20Васильцовский%20стан%2C%20д.%205%2C%20к.%202" target="_blank" rel="noopener">Построить маршрут</a></div><div class="socials"><a href="https://vk.ru/reshswoyatraektoriya" target="_blank" rel="noopener">ВКонтакте</a><a href="https://max.ru/id972716512926_biz2" target="_blank" rel="noopener">MAX</a><a href="https://t.me/kumguat1" target="_blank" rel="noopener">Telegram</a></div></div>
-        <form class="quick-form" data-lead-form>
-          <h3>Расскажите, что волнует</h3><p>Перезвоним, уточним детали и предложим следующий шаг.</p>
-          <label><span>Ваше имя</span><input type="text" name="name" autocomplete="name" required placeholder="Например, Анна"></label>
-          <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" required placeholder="+7 900 000-00-00"></label>
-          <label><span>Возраст ребёнка</span><input type="text" name="age" placeholder="Например, 5 лет"></label>
-          <label><span>Коротко о запросе</span><textarea name="message" rows="3" placeholder="Что сейчас особенно важно?"></textarea></label>
-          <label class="consent"><input type="checkbox" required><span>Согласен на обработку персональных данных</span></label>
-          <button class="btn btn-primary btn-large" type="submit">Отправить заявку</button>
-          <p class="form-status" aria-live="polite"></p>
-        </form>
+        <div class="contact-choice">
+          <p class="eyebrow green">Связаться напрямую</p><h3>Как вам удобнее?</h3><p>Никаких анкет. Позвоните или напишите — администратор ответит и поможет с выбором программы.</p>
+          <a class="contact-choice-main" href="tel:+79856379772"><span>Позвонить</span><b>+7 985 637-97-72</b></a>
+          <div class="contact-choice-grid"><a href="https://t.me/kumguat1" target="_blank" rel="noopener">Telegram</a><a href="https://max.ru/id972716512926_biz2" target="_blank" rel="noopener">MAX</a><a href="https://vk.ru/reshswoyatraektoriya" target="_blank" rel="noopener">ВКонтакте</a></div>
+        </div>
       </div>
     </section>
   </main>
@@ -217,14 +209,10 @@
     <div class="container footer-bottom"><span>© 2026 «Своя траектория»</span><button type="button" data-legal>Политика обработки данных</button><span>Информация на сайте не является публичной офертой</span></div>
   </footer>
 
-  <div class="mobile-bar"><a href="tel:+79856379772">Позвонить</a><a href="https://t.me/kumguat1" target="_blank" rel="noopener">Написать</a><button type="button" data-open-form>Записаться</button></div>
+  <div class="mobile-bar"><a href="tel:+79856379772">Позвонить</a><a href="https://t.me/kumguat1" target="_blank" rel="noopener">Telegram</a><a href="https://max.ru/id972716512926_biz2" target="_blank" rel="noopener">MAX</a></div>
 
   <div class="modal" id="programModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="programModalTitle">
-    <div class="modal-backdrop" data-close-modal></div><div class="modal-card program-modal-card"><button class="modal-close" type="button" aria-label="Закрыть" data-close-modal>×</button><p class="eyebrow green" id="programModalKicker">Программа</p><h2 id="programModalTitle">Название программы</h2><p class="modal-lead" id="programModalLead"></p><div class="modal-facts" id="programModalFacts"></div><div class="modal-body" id="programModalBody"></div><button class="btn btn-primary btn-large" type="button" data-open-form-from-program>Записаться</button></div>
-  </div>
-
-  <div class="modal" id="formModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
-    <div class="modal-backdrop" data-close-modal></div><div class="modal-card form-modal-card"><button class="modal-close" type="button" aria-label="Закрыть" data-close-modal>×</button><p class="eyebrow green">Первый шаг</p><h2 id="formModalTitle">Записаться на знакомство</h2><p>Оставьте номер — администратор перезвонит и поможет выбрать формат.</p><form data-lead-form><label><span>Имя родителя</span><input type="text" name="name" autocomplete="name" required placeholder="Ваше имя"></label><label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" required placeholder="+7 900 000-00-00"></label><label><span>Интересующая программа</span><select name="program"><option>Помогите подобрать</option><option>Логопедия</option><option>Подготовка к школе</option><option>Семейные классы</option><option>Приключение Петельки</option></select></label><label class="consent"><input type="checkbox" required><span>Согласен на обработку персональных данных</span></label><button class="btn btn-primary btn-large" type="submit">Жду звонка</button><p class="form-status" aria-live="polite"></p></form></div>
+    <div class="modal-backdrop" data-close-modal></div><div class="modal-card program-modal-card"><button class="modal-close" type="button" aria-label="Закрыть" data-close-modal>×</button><p class="eyebrow green" id="programModalKicker">Программа</p><h2 id="programModalTitle">Название программы</h2><p class="modal-lead" id="programModalLead"></p><div class="modal-facts" id="programModalFacts"></div><div class="modal-body" id="programModalBody"></div><div class="modal-contact"><a class="btn btn-primary btn-large" href="tel:+79856379772">Позвонить</a><a class="btn btn-outline btn-large" href="https://t.me/kumguat1" target="_blank" rel="noopener">Написать в Telegram</a></div></div>
   </div>
 
   <div class="cookie" id="cookieNotice"><div><b>Немного про cookie</b><p>Используем только необходимые файлы для корректной работы страницы.</p></div><button class="btn btn-light" type="button" data-cookie-ok>Понятно</button></div>

@@ -6,3 +6,26 @@
 html,body{overflow-x:hidden}
 .hero-media{background-image:linear-gradient(90deg,rgba(28,49,44,.94) 0%,rgba(28,49,44,.72) 42%,rgba(28,49,44,.12) 70%),url("photo-kids-hands-up.jpg")}
 @media(max-width:760px){.hero-media{background-image:linear-gradient(180deg,rgba(28,49,44,.4),rgba(28,49,44,.94) 68%),url("photo-kids-hands-up.jpg")}}
+
+/* Revision: clearer contact path, finder and imagery */
+.hero-media{background-image:linear-gradient(90deg,rgba(28,49,44,.95) 0%,rgba(28,49,44,.78) 36%,rgba(28,49,44,.08) 67%),url("hero-learning-center.png");background-position:center center}
+.finder-panel{display:grid;grid-template-columns:1fr 1fr;gap:18px;background:transparent;box-shadow:none;padding:0}
+.finder-step{background:#fff;border:1px solid var(--line);border-radius:24px;padding:28px;box-shadow:0 14px 40px rgba(28,49,44,.07)}
+.finder-step-title{display:flex;align-items:center;gap:14px;margin-bottom:22px}
+.finder-step-title>span{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);font-size:18px;font-weight:800;flex:none}
+.finder-step-title b{display:block;font-size:20px}.finder-step-title small{display:block;color:var(--muted);margin-top:2px}
+.finder-step .finder-options{display:flex}.finder-result{grid-column:1/-1;text-align:center;margin:4px 0 0}
+.character-card img,.character-image img{object-fit:contain!important;object-position:center!important}
+.character-card img{background:#fff8ef;padding:8px}
+.character-image{padding:14px}.character-image img{border-radius:120px 120px 18px 18px}
+.contact-choice{background:#fff;color:var(--ink);padding:36px;border-radius:24px;align-self:center}
+.contact-choice h3{font-size:34px;margin-bottom:12px}.contact-choice>p:not(.eyebrow){color:var(--muted)}
+.contact-choice-main{display:flex;flex-direction:column;background:var(--yellow);border-radius:18px;padding:20px;margin:26px 0 12px}.contact-choice-main span{font-size:13px;text-transform:uppercase;letter-spacing:.1em;font-weight:800}.contact-choice-main b{font-size:24px}
+.contact-choice-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.contact-choice-grid a{border:1px solid var(--line);border-radius:14px;padding:14px 8px;text-align:center;font-weight:800}
+.round-btn{display:grid;place-items:center}.modal-contact{display:flex;flex-wrap:wrap;gap:10px}.mobile-bar a:last-child{background:var(--yellow);color:var(--ink)}
+@media(max-width:760px){
+  .hero-media{background-image:linear-gradient(180deg,rgba(28,49,44,.03) 0%,rgba(28,49,44,.14) 50%,var(--ink) 100%),url("hero-learning-center.png");background-size:100% 320px,auto 320px;background-position:center top,center top;background-repeat:no-repeat;background-color:var(--ink)}
+  .finder-panel{grid-template-columns:1fr}.finder-step{padding:22px}.finder-result{grid-column:auto;text-align:left}.finder-options{grid-template-columns:1fr 1fr}
+  .characters-stage{display:grid;grid-template-columns:1fr;overflow:visible;margin-right:0;padding-right:0}.characters-stage article{min-width:0}.character-image{height:420px;padding:10px}.character-image img{object-fit:contain!important}
+  .contact-choice{padding:26px 18px}.contact-choice-grid{grid-template-columns:1fr}.mobile-bar{grid-template-columns:1fr 1fr 1fr}
+}

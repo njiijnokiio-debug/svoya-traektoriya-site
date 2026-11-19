@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Своя траектория — центр речи, развития и семейного образования в Москве, рядом с метро Текстильщики и Кузьминки. Программы для детей от 2 до 12 лет.">
+  <meta name="theme-color" content="#1c312c">
+  <meta property="og:title" content="Своя траектория — центр речи и развития">
+  <meta property="og:description" content="Помогаем ребёнку двигаться в своём ритме: речь, чтение, письмо, подготовка к школе и семейные классы.">
+  <title>Центр речи и развития в Текстильщиках — Своя траектория</title>
+  <link rel="icon" href="assets/sign-only.png">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">К содержанию</a>
+
+  <div class="rename-note" id="renameNote">
+    <span>Мы выросли и стали «Своей траекторией»</span>
+    <button type="button" aria-label="Закрыть сообщение" data-dismiss-note>×</button>
+  </div>
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Своя траектория, на главную">
+        <img src="assets/logo-horizontal-color-mono.png" alt="Своя траектория — центр речи, развития и семейного образования">
+      </a>
+      <nav class="desktop-nav" aria-label="Основная навигация">
+        <a href="#programs">Программы</a>
+        <a href="#family">Семейные классы</a>
+        <a href="#approach">О центре</a>
+        <a href="#contacts">Контакты</a>
+      </nav>
+      <div class="header-actions">
+        <a class="phone" href="tel:+79856379772">+7 985 637-97-72</a>
+        <button class="btn btn-primary" type="button" data-open-form>Записаться</button>
+        <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobileMenu" aria-label="Открыть меню"><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-menu" id="mobileMenu" aria-label="Мобильная навигация">
+      <a href="#programs">Программы</a><a href="#family">Семейные классы</a><a href="#approach">О центре</a><a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-media" role="img" aria-label="Дети с поднятыми руками на занятии"></div>
+      <div class="hero-shape"></div>
+      <div class="container hero-content">
+        <p class="eyebrow">Москва · Текстильщики — Кузьминки</p>
+        <h1 id="hero-title">У каждого ребёнка<br><em>своя траектория</em></h1>
+        <p class="hero-lead">Помогаем развивать речь, уверенно читать и писать, подготовиться к школе и найти комфортный ритм обучения.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary btn-large" type="button" data-open-form>Записаться</button>
+          <a class="btn btn-light btn-large" href="#finder">Подобрать программу</a>
+        </div>
+        <div class="hero-proof" aria-label="Кратко о центре">
+          <span><b>с 2015</b> рядом с семьями</span>
+          <span><b>2–12 лет</b> возраст детей</span>
+          <span><b>индивидуально</b> и в мини-группах</span>
+        </div>
+      </div>
+      <div class="scroll-note" aria-hidden="true">Смотреть программы <span></span></div>
+    </section>
+
+    <section class="finder section" id="finder">
+      <div class="container">
+        <div class="section-heading finder-heading">
+          <div><p class="eyebrow green">Быстрый подбор</p><h2>С чего начнём?</h2></div>
+          <p>Выберите возраст или ситуацию — покажем программы, которые могут подойти. Финальное решение принимаем после знакомства с ребёнком.</p>
+        </div>
+        <div class="finder-panel">
+          <div class="finder-tabs" role="tablist" aria-label="Способ подбора">
+            <button class="finder-tab active" type="button" role="tab" aria-selected="true" data-finder-tab="age">По возрасту</button>
+            <button class="finder-tab" type="button" role="tab" aria-selected="false" data-finder-tab="need">По запросу</button>
+          </div>
+          <div class="finder-options active" data-finder-panel="age">
+            <button type="button" data-filter="2-3">2–3 года</button><button type="button" data-filter="3-4">3,5–4</button><button type="button" data-filter="4-5">4–5</button><button type="button" data-filter="5-6">5–6</button><button type="button" data-filter="6">6 лет</button><button type="button" data-filter="school">1–4 класс</button>
+          </div>
+          <div class="finder-options" data-finder-panel="need" hidden>
+            <button type="button" data-filter="speech">Не говорит или плохо произносит звуки</button><button type="button" data-filter="writing">Трудно писать и читать</button><button type="button" data-filter="school">Школьные трудности</button><button type="button" data-filter="family">Некомфортно в большом классе</button>
+          </div>
+          <p class="finder-result" id="finderResult" aria-live="polite">Нажмите на вариант — подсветим подходящие программы ниже.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="programs section" id="programs">
+      <div class="container">
+        <div class="section-heading">
+          <div><p class="eyebrow green">Программы</p><h2>Маленькие шаги.<br>Большие перемены.</h2></div>
+          <p>От запуска речи до комфортной начальной школы — бережно, системно и в понятном родителю формате.</p>
+        </div>
+        <div class="program-grid" id="programGrid">
+          <article class="program-card featured" data-tags="2-3 speech 3-4 4-5 5-6 school">
+            <div class="program-top"><span class="program-icon">Р</span><span class="status open">Идёт запись</span></div>
+            <p class="program-age">от 2 лет · индивидуально</p><h3>Логопедия</h3>
+            <p>Запуск речи, звукопроизношение, развитие речи, трудности письма и чтения.</p>
+            <button class="text-link" type="button" data-program="speech">Подробнее</button>
+          </article>
+          <article class="program-card" data-tags="3-4 speech">
+            <div class="program-top"><span class="program-icon yellow">НЛ</span><span class="status open">Идёт набор</span></div>
+            <p class="program-age">3,5–4 года · 2 раза в неделю</p><h3>Ножки-ладошки</h3>
+            <p>Логоритмика с логопедом и тренером по двигательному развитию.</p>
+            <div class="price">от 1 420 ₽ <small>за занятие</small></div>
+            <button class="text-link" type="button" data-program="legs">Подробнее</button>
+          </article>
+          <article class="program-card character-card" data-tags="4-5 writing">
+            <img src="assets/char-petelka.jpg" alt="Петелька — героиня курса постановки руки" loading="lazy">
+            <div><p class="program-age">4–5 лет · 1 раз в неделю</p><h3>Приключение Петельки</h3><p>Постановка руки и первые уверенные линии через игру.</p><div class="price">1 100 ₽ <small>за занятие</small></div><button class="text-link" type="button" data-program="petelka">Подробнее</button></div>
+          </article>
+          <article class="program-card" data-tags="4-5 5-6 school">
+            <div class="program-top"><span class="program-icon green-bg">ПИ</span><span class="status open">Есть места</span></div>
+            <p class="program-age">4–5 лет · 2 раза в неделю</p><h3>Познавательные игры</h3>
+            <p>Речь, логика, внимание, память и первые шаги в математике и грамоте.</p>
+            <div class="price">8 800 ₽ <small>абонемент</small></div>
+            <button class="text-link" type="button" data-program="games">Подробнее</button>
+          </article>
+          <article class="program-card dark" data-tags="5-6 6 school">
+            <div class="program-top"><span class="program-icon white">ПШ</span><span class="status inverse">Три группы</span></div>
+            <p class="program-age">5–6 лет · вечер или суббота</p><h3>Подготовка к школе</h3>
+            <p>Учимся слышать задание, формулировать мысли, читать, считать и работать в тетради.</p>
+            <button class="text-link light-link" type="button" data-program="prep">Подробнее</button>
+          </article>
+          <article class="program-card" data-tags="school family">
+            <div class="program-top"><span class="program-icon yellow">1–4</span><span class="status open">Набор ежегодно</span></div>
+            <p class="program-age">1–4 класс · мини-класс 6–8 детей</p><h3>Семейные классы</h3>
+            <p>Комфортный темп, общение и помогающие специалисты без требования ПМПК.</p>
+            <button class="text-link" type="button" data-program="family">Подробнее</button>
+          </article>
+        </div>
+        <div class="center-action"><button class="btn btn-outline" type="button" data-show-all>Показать ещё 7 программ</button></div>
+      </div>
+    </section>
+
+    <section class="approach section" id="approach">
+      <div class="container approach-grid">
+        <div class="approach-copy">
+          <p class="eyebrow yellow-text">Наш подход</p>
+          <h2>Не подгоняем.<br><em>Находим путь.</em></h2>
+          <p class="approach-lead">Ребёнок может идти к результату с другой скоростью, в своём ритме и объёме. Мы видим не ярлык, а человека — с диагнозом или без.</p>
+          <ul class="principles">
+            <li><span>01</span><div><b>Сначала знакомимся</b><p>Разбираемся в ситуации семьи и смотрим, что будет полезно именно сейчас.</p></div></li>
+            <li><span>02</span><div><b>Собираем маршрут</b><p>Подбираем формат, нагрузку и специалистов без лишних занятий.</p></div></li>
+            <li><span>03</span><div><b>Двигаемся рядом</b><p>Объясняем родителю, что происходит, и замечаем реальные изменения.</p></div></li>
+          </ul>
+        </div>
+        <figure class="approach-photo">
+          <img src="assets/photo-hands-together.jpg" alt="Дети складывают руки вместе">
+          <figcaption><strong>Центр работает с 2015 года</strong><span>Речь · развитие · семейное образование</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="characters section">
+      <div class="container">
+        <div class="section-heading compact"><div><p class="eyebrow green">Курс для дошкольников</p><h2>Секретное общество<br>уверенных линий</h2></div><p>Петелька, Зигзаг и Черточка превращают постановку руки в настоящее приключение.</p></div>
+        <div class="characters-stage">
+          <article><div class="character-image cream"><img src="assets/char-petelka.jpg" alt="Петелька"></div><span class="character-name">Петелька</span><blockquote>«Научу тебя аккуратности, и твои пальчики станут послушными»</blockquote></article>
+          <article><div class="character-image white"><img src="assets/char-zigzag.jpg" alt="Зигзаг"></div><span class="character-name">Зигзаг</span><blockquote>«Со мной твои линии станут чёткими и ровными»</blockquote></article>
+          <article><div class="character-image blue"><img src="assets/char-chertochka.jpg" alt="Черточка"></div><span class="character-name">Черточка</span><blockquote>«Перейдём от хаотичных каляк к уверенным линиям»</blockquote></article>
+        </div>
+        <div class="center-action"><button class="btn btn-primary" type="button" data-program="petelka">О курсе «Приключение Петельки»</button></div>
+      </div>
+    </section>
+
+    <section class="family section" id="family">
+      <div class="container family-card">
+        <div class="family-copy"><p class="eyebrow yellow-text">Семейные классы · 1–4 класс</p><h2>Школа, в которой<br>можно быть собой</h2><p>Мини-классы по 6–8 человек для детей, которым некомфортно в шумном классе. Свой темп, друзья и специалисты рядом.</p><div class="family-benefits"><span>ребёнок верит в свои силы</span><span>появляются друзья</span><span>семья возвращает устойчивый ритм</span></div><button class="btn btn-primary btn-large" type="button" data-program="family">Узнать, подойдёт ли формат</button></div>
+        <div class="family-visual"><img src="assets/photo-hands-together.jpg" alt="Команда детей объединяет руки"><div class="family-badge"><b>6–8</b><span>детей<br>в классе</span></div></div>
+      </div>
+    </section>
+
+    <section class="enrollment section">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow green">Ближайшие наборы</p><h2>Можно присоединиться</h2></div><p>Оставьте контакт — администратор уточнит актуальное расписание и наличие мест.</p></div>
+        <div class="enrollment-list">
+          <article><span class="date-chip">сейчас</span><div><h3>Подготовка к школе</h3><p>Вечерние группы 5 и 6 лет, субботняя группа 6 лет</p></div><button class="round-btn" type="button" data-open-form aria-label="Записаться на подготовку к школе">+</button></article>
+          <article><span class="date-chip yellow">январь</span><div><h3>Нулевой класс</h3><p>Утренние занятия 3 раза в неделю по 2,5 часа</p></div><button class="round-btn" type="button" data-open-form aria-label="Записаться в список нулевого класса">+</button></article>
+          <article><span class="date-chip">скоро</span><div><h3>Онлайн-программа по речи</h3><p>Записанные фильмы и небольшие задания — сообщим о запуске</p></div><button class="round-btn" type="button" data-open-form aria-label="Узнать о запуске онлайн-программы">+</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq section" id="faq">
+      <div class="container faq-grid">
+        <div><p class="eyebrow green">Вопросы родителей</p><h2>Спокойно<br>обо всём важном</h2><p class="faq-intro">Не нашли ответ? Позвоните — расскажем без сложных терминов.</p><a class="phone-large" href="tel:+79856379772">+7 985 637-97-72</a></div>
+        <div class="accordion">
+          <details open><summary>С какого возраста можно прийти?<span>+</span></summary><p>Мы работаем с детьми примерно от 2 до 11–12 лет. Для малышей чаще начинаем с диагностики или консультации, затем предлагаем подходящий формат.</p></details>
+          <details><summary>Нужно ли заключение ПМПК?<span>+</span></summary><p>Для обращения в центр заключение не требуется. В семейных классах ребёнок может получать помощь специалистов без ПМПК.</p></details>
+          <details><summary>Как проходит первое знакомство?<span>+</span></summary><p>Администратор уточняет ваш запрос, возраст ребёнка и удобное время. Формат диагностики и её стоимость зависят от направления — всё объясним заранее.</p></details>
+          <details><summary>Сколько детей в группе?<span>+</span></summary><p>Размер зависит от программы. В семейных классах — 6–8 детей, в «Домашке» — не более 6. По другим группам администратор сообщит актуальный состав.</p></details>
+          <details><summary>Как устроена оплата?<span>+</span></summary><p>Для части программ действует абонемент. Условия пропусков, переносов и актуальная стоимость подтверждаются перед записью.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts section" id="contacts">
+      <div class="container contact-card">
+        <div class="contact-copy"><p class="eyebrow yellow-text">Приезжайте знакомиться</p><h2>Мы рядом</h2><address>Москва, ул. Васильцовский стан,<br>д. 5, к. 2</address><p>Метро «Текстильщики» и «Кузьминки» · ЮВАО</p><div class="contact-links"><a href="tel:+79856379772">+7 985 637-97-72</a><a href="https://yandex.ru/maps/?text=Москва%2C%20ул.%20Васильцовский%20стан%2C%20д.%205%2C%20к.%202" target="_blank" rel="noopener">Построить маршрут</a></div><div class="socials"><a href="https://vk.ru/reshswoyatraektoriya" target="_blank" rel="noopener">ВКонтакте</a><a href="https://max.ru/id972716512926_biz2" target="_blank" rel="noopener">MAX</a><a href="https://t.me/kumguat1" target="_blank" rel="noopener">Telegram</a></div></div>
+        <form class="quick-form" data-lead-form>
+          <h3>Расскажите, что волнует</h3><p>Перезвоним, уточним детали и предложим следующий шаг.</p>
+          <label><span>Ваше имя</span><input type="text" name="name" autocomplete="name" required placeholder="Например, Анна"></label>
+          <label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" required placeholder="+7 900 000-00-00"></label>
+          <label><span>Возраст ребёнка</span><input type="text" name="age" placeholder="Например, 5 лет"></label>
+          <label><span>Коротко о запросе</span><textarea name="message" rows="3" placeholder="Что сейчас особенно важно?"></textarea></label>
+          <label class="consent"><input type="checkbox" required><span>Согласен на обработку персональных данных</span></label>
+          <button class="btn btn-primary btn-large" type="submit">Отправить заявку</button>
+          <p class="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid"><div class="footer-brand"><img src="assets/logo-vertical-dark.png" alt="Своя траектория"><p>Центр речи, развития и семейного образования</p></div><div><h3>Навигация</h3><a href="#programs">Программы</a><a href="#family">Семейные классы</a><a href="#approach">О центре</a><a href="#faq">Вопросы</a></div><div><h3>Контакты</h3><a href="tel:+79856379772">+7 985 637-97-72</a><p>Москва, Васильцовский стан, 5к2</p><a href="#contacts">Как добраться</a></div><img class="footer-badge" src="assets/badge-round.png" alt="" aria-hidden="true"></div>
+    <div class="container footer-bottom"><span>© 2026 «Своя траектория»</span><button type="button" data-legal>Политика обработки данных</button><span>Информация на сайте не является публичной офертой</span></div>
+  </footer>
+
+  <div class="mobile-bar"><a href="tel:+79856379772">Позвонить</a><a href="https://t.me/kumguat1" target="_blank" rel="noopener">Написать</a><button type="button" data-open-form>Записаться</button></div>
+
+  <div class="modal" id="programModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="programModalTitle">
+    <div class="modal-backdrop" data-close-modal></div><div class="modal-card program-modal-card"><button class="modal-close" type="button" aria-label="Закрыть" data-close-modal>×</button><p class="eyebrow green" id="programModalKicker">Программа</p><h2 id="programModalTitle">Название программы</h2><p class="modal-lead" id="programModalLead"></p><div class="modal-facts" id="programModalFacts"></div><div class="modal-body" id="programModalBody"></div><button class="btn btn-primary btn-large" type="button" data-open-form-from-program>Записаться</button></div>
+  </div>
+
+  <div class="modal" id="formModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="formModalTitle">
+    <div class="modal-backdrop" data-close-modal></div><div class="modal-card form-modal-card"><button class="modal-close" type="button" aria-label="Закрыть" data-close-modal>×</button><p class="eyebrow green">Первый шаг</p><h2 id="formModalTitle">Записаться на знакомство</h2><p>Оставьте номер — администратор перезвонит и поможет выбрать формат.</p><form data-lead-form><label><span>Имя родителя</span><input type="text" name="name" autocomplete="name" required placeholder="Ваше имя"></label><label><span>Телефон</span><input type="tel" name="phone" autocomplete="tel" required placeholder="+7 900 000-00-00"></label><label><span>Интересующая программа</span><select name="program"><option>Помогите подобрать</option><option>Логопедия</option><option>Подготовка к школе</option><option>Семейные классы</option><option>Приключение Петельки</option></select></label><label class="consent"><input type="checkbox" required><span>Согласен на обработку персональных данных</span></label><button class="btn btn-primary btn-large" type="submit">Жду звонка</button><p class="form-status" aria-live="polite"></p></form></div>
+  </div>
+
+  <div class="cookie" id="cookieNotice"><div><b>Немного про cookie</b><p>Используем только необходимые файлы для корректной работы страницы.</p></div><button class="btn btn-light" type="button" data-cookie-ok>Понятно</button></div>
+</body>
+</html>

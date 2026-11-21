@@ -12,6 +12,11 @@ const menuBtn=qs('.menu-btn');const mobileMenu=qs('#mobileMenu');
 menuBtn?.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
 qsa('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
 
+const ageLabels={'age-2':'2–3 лет','age-3':'3,5–4 лет','age-4':'4–5 лет','age-5':'5–6 лет','age-school':'1–4 класса'};
+function showAgePrograms(targetId,{scroll=true}={}){const target=qs(`#${targetId}`);if(!target)return;qsa('.age-group').forEach(group=>{group.hidden=group!==target});qsa('[data-age-target]').forEach(button=>{const active=button.dataset.ageTarget===targetId;button.classList.toggle('active',active);button.setAttribute('aria-pressed',String(active))});qs('#programEmpty').hidden=true;qs('#programResultsTitle').textContent=`Программы для ${ageLabels[targetId]}`;qs('#programResultsText').textContent='Показываем только занятия для выбранной возрастной группы.';if(scroll)setTimeout(()=>qs('#programs').scrollIntoView({behavior:'smooth',block:'start'}),120)}
+qsa('[data-age-target]').forEach(button=>button.addEventListener('click',()=>showAgePrograms(button.dataset.ageTarget)));
+const initialAge=location.hash.replace('#','');if(ageLabels[initialAge])showAgePrograms(initialAge,{scroll:false});
+
 function openModal(modal){qsa('.modal.open').forEach(closeModal);modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');setTimeout(()=>qs('button,input',modal)?.focus(),20)}
 function closeModal(modal){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');if(!qs('.modal.open'))document.body.classList.remove('modal-open')}
 qsa('[data-close-modal]').forEach(el=>el.addEventListener('click',()=>closeModal(el.closest('.modal'))));

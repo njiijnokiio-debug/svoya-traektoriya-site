@@ -65,11 +65,11 @@
           <p>Никакого сложного подбора: выберите возраст и перейдите к подходящим занятиям.</p>
         </div>
         <nav class="age-links" aria-label="Выбор программ по возрасту">
-          <a href="#age-2"><b>2–3</b><span>года</span><small>Речь</small></a>
-          <a href="#age-3"><b>3,5–4</b><span>года</span><small>Речь и движение</small></a>
-          <a href="#age-4"><b>4–5</b><span>лет</span><small>Развитие</small></a>
-          <a href="#age-5"><b>5–6</b><span>лет</span><small>Подготовка к школе</small></a>
-          <a href="#age-school"><b>1–4</b><span>класс</span><small>Семейные классы</small></a>
+          <button type="button" data-age-target="age-2" aria-pressed="false"><b>2–3</b><span>года</span><small>Речь</small></button>
+          <button type="button" data-age-target="age-3" aria-pressed="false"><b>3,5–4</b><span>года</span><small>Речь и движение</small></button>
+          <button type="button" data-age-target="age-4" aria-pressed="false"><b>4–5</b><span>лет</span><small>Развитие</small></button>
+          <button type="button" data-age-target="age-5" aria-pressed="false"><b>5–6</b><span>лет</span><small>Подготовка к школе</small></button>
+          <button type="button" data-age-target="age-school" aria-pressed="false"><b>1–4</b><span>класс</span><small>Семейные классы</small></button>
         </nav>
       </div>
     </section>
@@ -77,11 +77,12 @@
     <section class="programs section" id="programs">
       <div class="container">
         <div class="section-heading">
-          <div><p class="eyebrow green">Все направления</p><h2>Занятия по возрастам</h2></div>
-          <p>Программы идут по порядку взросления. Если возраст на границе, администратор подскажет подходящую группу.</p>
+          <div><p class="eyebrow green">Подходящие программы</p><h2 id="programResultsTitle">Сначала выберите возраст</h2></div>
+          <p id="programResultsText">Нажмите на возраст выше — здесь появятся только подходящие варианты.</p>
         </div>
+        <div class="program-empty" id="programEmpty"><b>Выберите возраст ребёнка</b><span>Мы покажем программы только для выбранной возрастной группы.</span></div>
         <div class="age-catalog" id="programGrid">
-          <section class="age-group" id="age-2"><div class="age-marker"><b>2–3</b><span>года</span></div><div class="age-programs"><div class="age-group-heading"><h3>Начинаем говорить</h3><p>Индивидуальный формат с учётом запроса семьи.</p></div><div class="age-program-grid one">
+          <section class="age-group" id="age-2" hidden><div class="age-marker"><b>2–3</b><span>года</span></div><div class="age-programs"><div class="age-group-heading"><h3>Начинаем говорить</h3><p>Индивидуальный формат с учётом запроса семьи.</p></div><div class="age-program-grid one">
           <article class="program-card featured" id="program-speech">
             <img class="program-photo" src="program-speech.png" alt="Занятие ребёнка с логопедом">
             <div class="program-top"><span class="status open">Идёт запись</span></div>
@@ -91,7 +92,7 @@
           </article>
           </div></div></section>
 
-          <section class="age-group" id="age-3"><div class="age-marker"><b>3,5–4</b><span>года</span></div><div class="age-programs"><div class="age-group-heading"><h3>Соединяем речь и движение</h3><p>Занятия в игровом ритме с двумя специалистами.</p></div><div class="age-program-grid one">
+          <section class="age-group" id="age-3" hidden><div class="age-marker"><b>3,5–4</b><span>года</span></div><div class="age-programs"><div class="age-group-heading"><h3>Соединяем речь и движение</h3><p>Занятия в игровом ритме с двумя специалистами.</p></div><div class="age-program-grid one">
           <article class="program-card">
             <img class="program-photo" src="program-movement.png" alt="Дети занимаются движением вместе с педагогом">
             <div class="program-top"><span class="status open">Идёт набор</span></div>
@@ -102,7 +103,7 @@
           </article>
           </div></div></section>
 
-          <section class="age-group" id="age-4"><div class="age-marker"><b>4–5</b><span>лет</span></div><div class="age-programs"><div class="age-group-heading"><h3>Развиваем руку, речь и мышление</h3><p>Две программы для уверенного старта.</p></div><div class="age-program-grid">
+          <section class="age-group" id="age-4" hidden><div class="age-marker"><b>4–5</b><span>лет</span></div><div class="age-programs"><div class="age-group-heading"><h3>Развиваем руку, речь и мышление</h3><p>Две программы для уверенного старта.</p></div><div class="age-program-grid">
           <article class="program-card character-card" id="program-petelka">
             <img src="char-petelka.jpg" alt="Петелька — героиня курса постановки руки" loading="lazy">
             <div><p class="program-age">4–5 лет · 1 раз в неделю</p><h3>Приключение Петельки</h3><p>Постановка руки и первые уверенные линии через игру.</p><div class="price">1 100 ₽ <small>за занятие</small></div><button class="text-link" type="button" data-program="petelka">Подробнее</button></div>
@@ -117,7 +118,7 @@
           </article>
           </div></div></section>
 
-          <section class="age-group" id="age-5"><div class="age-marker"><b>5–6</b><span>лет</span></div><div class="age-programs"><div class="age-group-heading"><h3>Готовимся к школе</h3><p>Учимся понимать задания и работать самостоятельно.</p></div><div class="age-program-grid one">
+          <section class="age-group" id="age-5" hidden><div class="age-marker"><b>5–6</b><span>лет</span></div><div class="age-programs"><div class="age-group-heading"><h3>Готовимся к школе</h3><p>Учимся понимать задания и работать самостоятельно.</p></div><div class="age-program-grid one">
           <article class="program-card dark" id="program-prep">
             <img class="program-photo" src="program-school.png" alt="Подготовка детей к школе в небольшой группе">
             <div class="program-top"><span class="status inverse">Три группы</span></div>
@@ -127,7 +128,7 @@
           </article>
           </div></div></section>
 
-          <section class="age-group" id="age-school"><div class="age-marker"><b>1–4</b><span>класс</span></div><div class="age-programs"><div class="age-group-heading"><h3>Учимся в своём ритме</h3><p>Мини-классы для детей младшего школьного возраста.</p></div><div class="age-program-grid one">
+          <section class="age-group" id="age-school" hidden><div class="age-marker"><b>1–4</b><span>класс</span></div><div class="age-programs"><div class="age-group-heading"><h3>Учимся в своём ритме</h3><p>Мини-классы для детей младшего школьного возраста.</p></div><div class="age-program-grid one">
           <article class="program-card" id="program-family">
             <img class="program-photo" src="photo-hands-together.jpg" alt="Дети объединяют руки">
             <div class="program-top"><span class="status open">Набор ежегодно</span></div>

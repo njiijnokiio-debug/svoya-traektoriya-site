@@ -111,3 +111,29 @@ html,body{overflow-x:hidden}
   .program-empty{min-height:220px;padding:24px}.program-empty b{font-size:24px}
   .program-photo{height:auto}
 }
+
+/* Keep every program image on the same visual grid. */
+.age-program-grid .program-card{overflow:hidden}
+.age-program-grid .program-card>img,
+.age-program-grid .program-card.character-card>img{
+  width:calc(100% + 56px);
+  height:250px;
+  min-height:250px;
+  margin:-28px -28px 22px;
+  padding:0;
+  border-radius:27px 27px 0 0;
+  background:#edf1ed;
+  object-fit:contain!important;
+  object-position:center!important;
+  flex:none;
+}
+.age-program-grid .character-card{display:flex;flex-direction:column;gap:0}
+.age-program-grid .character-card>div{flex:1}
+@media(max-width:760px){
+  .age-program-grid .program-card>img,
+  .age-program-grid .program-card.character-card>img{
+    height:220px;
+    min-height:220px;
+    margin-bottom:20px;
+  }
+}

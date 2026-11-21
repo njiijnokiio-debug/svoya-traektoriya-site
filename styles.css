@@ -117,17 +117,19 @@ html,body{overflow-x:hidden}
 .age-program-grid .program-card>img,
 .age-program-grid .program-card.character-card>img{
   width:calc(100% + 56px);
+  max-width:none;
   height:250px;
   min-height:250px;
   margin:-28px -28px 22px;
   padding:0;
   border-radius:27px 27px 0 0;
   background:#edf1ed;
-  object-fit:contain!important;
+  object-fit:cover!important;
   object-position:center!important;
   flex:none;
 }
 .age-program-grid .character-card{display:flex;flex-direction:column;gap:0}
+.age-program-grid .program-card.character-card>img{object-position:center 32%!important}
 .age-program-grid .character-card>div{flex:1}
 @media(max-width:760px){
   .age-program-grid .program-card>img,

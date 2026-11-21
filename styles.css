@@ -77,3 +77,16 @@ html,body{overflow-x:hidden}
   .characters-stage{display:grid;grid-template-columns:1fr;gap:20px}.characters-stage article{min-width:0}.character-image{height:410px;aspect-ratio:auto;padding:22px}.character-image img{object-fit:contain!important}
   .enrollment-list article{grid-template-columns:76px minmax(0,1fr) 44px;gap:10px}.round-btn{justify-self:end}.cookie{bottom:14px}
 }
+
+/* Image-rich program cards */
+.hero-media{background-image:linear-gradient(90deg,rgba(28,49,44,.96) 0%,rgba(28,49,44,.8) 38%,rgba(28,49,44,.08) 72%),url("photo-kids-hands-up.jpg")}
+.age-program-grid .program-card:not(.character-card){overflow:hidden}
+.program-photo{width:calc(100% + 56px);height:250px;object-fit:cover;object-position:center;margin:-28px -28px 22px}
+.program-top:has(.status:only-child){justify-content:flex-end;margin-bottom:12px}
+.family-badge{left:22px;bottom:22px;flex-direction:column;gap:2px;transform:none;text-align:center;padding:18px}
+.family-badge b{font-size:34px;line-height:1}.family-badge span{font-size:13px;line-height:1.15;max-width:74px}
+@media(max-width:760px){
+  .hero-media{background-image:linear-gradient(180deg,rgba(28,49,44,.05) 0%,rgba(28,49,44,.18) 40%,rgba(28,49,44,.96) 67%),url("photo-kids-hands-up.jpg")}
+  .program-photo{height:220px}
+  .family-badge{left:14px;bottom:14px;padding:14px}.family-badge b{font-size:29px}.family-badge span{font-size:12px}
+}

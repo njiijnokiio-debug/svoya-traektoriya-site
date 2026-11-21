@@ -29,3 +29,51 @@ html,body{overflow-x:hidden}
   .characters-stage{display:grid;grid-template-columns:1fr;overflow:visible;margin-right:0;padding-right:0}.characters-stage article{min-width:0}.character-image{height:420px;padding:10px}.character-image img{object-fit:contain!important}
   .contact-choice{padding:26px 18px}.contact-choice-grid{grid-template-columns:1fr}.mobile-bar{grid-template-columns:1fr 1fr 1fr}
 }
+
+/* Structural redesign */
+.site-header{height:96px}.brand{width:410px}.header-inner{gap:34px}.desktop-nav{gap:30px}
+.finder{background:#f1f4f1}.route-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.route-card{min-height:270px;border-radius:26px;padding:30px;display:flex;flex-direction:column;border:1px solid var(--line);background:#fff;transition:transform .2s,box-shadow .2s}
+.route-card:hover{transform:translateY(-4px);box-shadow:0 18px 46px rgba(28,49,44,.1)}
+.route-card>span{display:inline-flex;align-self:flex-start;border-radius:999px;padding:7px 11px;background:#edf3ea;color:#347323;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.09em}
+.route-card h3{font-size:30px;max-width:470px;margin:24px 0 12px}.route-card p{color:var(--muted);max-width:460px}.route-card>b{margin-top:auto;color:var(--green);font-size:15px}
+.route-speech{background:#fff}.route-development{background:#fff9e8}.route-school{background:#eaf2ec}.route-help{background:var(--ink);color:#fff;border-color:var(--ink)}
+.route-help>span{background:rgba(255,255,255,.12);color:var(--yellow)}.route-help p{color:rgba(255,255,255,.7)}.route-help .btn{align-self:flex-start;margin-top:auto}
+.programs{background:#fff}.program-card{scroll-margin-top:125px}.program-card h3{font-size:30px}.program-card p{font-size:16px;line-height:1.55}
+.channel-link{display:block;text-align:center;margin-top:10px;padding:13px;border-radius:14px;background:#eef3f1;font-weight:800;color:var(--ink)}
+.contact-choice-grid{grid-template-columns:1fr 1fr}
+.cookie{background:#e4e7e5;color:var(--ink);border:1px solid #bfc5c1;box-shadow:0 18px 50px rgba(28,49,44,.22)}
+.cookie p{color:#5d6662}.cookie .btn-light{background:var(--ink);color:#fff}
+@media(max-width:1050px){.brand{width:330px}}
+@media(max-width:760px){
+  body{padding-bottom:0}.site-header{height:78px}.brand{width:260px}.mobile-menu{top:78px}
+  .route-grid{grid-template-columns:1fr}.route-card{min-height:230px;padding:24px}.route-card h3{font-size:26px}
+  .cookie{bottom:14px}.contact-choice-grid{grid-template-columns:1fr 1fr}
+}
+
+/* Age-led redesign */
+.site-header{height:108px}.brand{width:500px;flex:none}.brand img{width:100%;height:auto}.desktop-nav{gap:22px}.header-inner{gap:24px}
+.hero-media{background-image:linear-gradient(90deg,rgba(28,49,44,.96) 0%,rgba(28,49,44,.8) 38%,rgba(28,49,44,.08) 72%),url("assets/photo-kids-hands-up.jpg");background-position:center 63%;background-size:cover}
+.age-nav{background:var(--yellow);padding:86px 0}.age-nav .section-heading{margin-bottom:34px}.age-nav .eyebrow{color:var(--ink)}
+.age-links{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.age-links a{min-height:190px;background:#fff;border:1px solid rgba(28,49,44,.12);border-radius:24px;padding:24px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}
+.age-links a:hover{transform:translateY(-5px);box-shadow:0 18px 36px rgba(28,49,44,.12)}
+.age-links b{font-size:36px;line-height:1;letter-spacing:-.05em}.age-links span{font-size:17px;font-weight:800;margin-top:4px}.age-links small{font-size:14px;color:var(--muted);margin-top:auto;line-height:1.3}
+.programs{background:#f5f7f3}.age-catalog{border-top:1px solid var(--line)}
+.age-group{display:grid;grid-template-columns:160px 1fr;gap:42px;padding:54px 0;border-bottom:1px solid var(--line);scroll-margin-top:125px}
+.age-marker{position:sticky;top:132px;align-self:start;display:flex;flex-direction:column}.age-marker b{font-size:48px;line-height:.95;letter-spacing:-.055em}.age-marker span{font-size:16px;font-weight:800;color:var(--green);margin-top:8px;text-transform:uppercase;letter-spacing:.08em}
+.age-group-heading{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:24px}.age-group-heading h3{font-size:34px;margin:0;letter-spacing:-.03em}.age-group-heading p{margin:0;color:var(--muted);max-width:390px}
+.age-program-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.age-program-grid.one{grid-template-columns:minmax(0,760px)}
+.age-program-grid .program-card{min-height:320px}.age-program-grid .character-card{grid-column:auto;grid-template-columns:42% 1fr;gap:24px}.age-program-grid .character-card img{height:270px;object-fit:contain!important;object-position:center!important;padding:18px;background:#fff8ef}
+.characters{background:#fff}.character-image{height:auto;aspect-ratio:4/5;overflow:visible;padding:30px;border-radius:180px 180px 28px 28px}.character-image img{width:100%;height:100%;object-fit:contain!important;object-position:center!important;border-radius:0!important}.characters-stage article{background:#fafbf8;padding:22px}.characters-stage article:first-child{background:#fff7ed}.characters-stage article:last-child{background:#eef8fb}
+.enrollment-list article{grid-template-columns:112px minmax(0,1fr) 54px}.round-btn{justify-self:end;align-self:center;line-height:1;padding:0}
+@media(max-width:1180px){.brand{width:420px}.desktop-nav{gap:16px}.header-actions .phone{display:none}}
+@media(max-width:1050px){.site-header{height:96px}.brand{width:420px}.mobile-menu{top:96px}.age-links{grid-template-columns:repeat(3,1fr)}.age-links a:nth-last-child(-n+2){grid-column:span 1}}
+@media(max-width:760px){
+  .site-header{height:82px}.brand{width:min(300px,calc(100vw - 86px))}.mobile-menu{top:82px}.menu-btn{width:44px;height:44px;flex:none}
+  .hero{min-height:760px}.hero-media{background-image:linear-gradient(180deg,rgba(28,49,44,.05) 0%,rgba(28,49,44,.18) 40%,rgba(28,49,44,.96) 67%),url("assets/photo-kids-hands-up.jpg");background-position:56% center;background-size:auto 760px}.hero-content{padding-top:330px;padding-bottom:42px}.hero h1{font-size:46px}
+  .age-nav{padding:68px 0}.age-links{grid-template-columns:repeat(2,1fr);gap:10px}.age-links a{min-height:150px;padding:18px}.age-links a:last-child{grid-column:1/-1}.age-links b{font-size:31px}
+  .age-group{grid-template-columns:1fr;gap:20px;padding:46px 0;scroll-margin-top:96px}.age-marker{position:static;flex-direction:row;align-items:baseline;gap:8px}.age-marker b{font-size:42px}.age-group-heading{display:block}.age-group-heading h3{font-size:29px;margin-bottom:10px}.age-program-grid,.age-program-grid.one{grid-template-columns:1fr}.age-program-grid .program-card{min-height:310px}.age-program-grid .character-card{display:flex}.age-program-grid .character-card img{width:100%;height:320px;padding:16px}
+  .characters-stage{display:grid;grid-template-columns:1fr;gap:20px}.characters-stage article{min-width:0}.character-image{height:410px;aspect-ratio:auto;padding:22px}.character-image img{object-fit:contain!important}
+  .enrollment-list article{grid-template-columns:76px minmax(0,1fr) 44px;gap:10px}.round-btn{justify-self:end}.cookie{bottom:14px}
+}

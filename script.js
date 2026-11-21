@@ -12,11 +12,6 @@ const menuBtn=qs('.menu-btn');const mobileMenu=qs('#mobileMenu');
 menuBtn?.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
 qsa('#mobileMenu a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');menuBtn.setAttribute('aria-expanded','false')}));
 
-let selectedAge='';let selectedNeed='';
-function updateFinder(){let count=0;qsa('.program-card').forEach(card=>{const tags=card.dataset.tags.split(' ');const matchAge=!selectedAge||tags.includes(selectedAge);const matchNeed=!selectedNeed||tags.includes(selectedNeed);const match=matchAge&&matchNeed;card.classList.toggle('highlight',match&&(selectedAge||selectedNeed));card.classList.toggle('dim',!match&&(selectedAge||selectedNeed));if(match)count++});const result=qs('#finderResult');if(selectedAge&&selectedNeed){result.textContent=`Нашли подходящих вариантов: ${count}. Они выделены жёлтым в каталоге ниже.`;setTimeout(()=>qs('#programs').scrollIntoView({behavior:'smooth'}),450)}else if(selectedAge){result.textContent='Возраст выбран. Теперь уточните, что сейчас особенно важно.'}else if(selectedNeed){result.textContent='Запрос выбран. Теперь укажите возраст ребёнка.'}else{result.textContent='Выберите возраст и запрос — подходящие карточки будут выделены жёлтым.'}}
-qsa('[data-age]').forEach(btn=>btn.addEventListener('click',()=>{qsa('[data-age]').forEach(b=>b.classList.toggle('active',b===btn));selectedAge=btn.dataset.age;updateFinder()}));
-qsa('[data-need]').forEach(btn=>btn.addEventListener('click',()=>{qsa('[data-need]').forEach(b=>b.classList.toggle('active',b===btn));selectedNeed=btn.dataset.need;updateFinder()}));
-
 function openModal(modal){qsa('.modal.open').forEach(closeModal);modal.classList.add('open');modal.setAttribute('aria-hidden','false');document.body.classList.add('modal-open');setTimeout(()=>qs('button,input',modal)?.focus(),20)}
 function closeModal(modal){modal.classList.remove('open');modal.setAttribute('aria-hidden','true');if(!qs('.modal.open'))document.body.classList.remove('modal-open')}
 qsa('[data-close-modal]').forEach(el=>el.addEventListener('click',()=>closeModal(el.closest('.modal'))));
